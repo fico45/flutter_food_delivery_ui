@@ -3,8 +3,6 @@ import 'package:flutter_food_delivery_ui/data/data.dart';
 import 'package:flutter_food_delivery_ui/models/order.dart';
 
 class RecentOrders extends StatelessWidget {
-  const RecentOrders({Key key}) : super(key: key);
-
   _buildRecentOrder(BuildContext context, Order order) {
     return Container(
       margin: EdgeInsets.all(10),
