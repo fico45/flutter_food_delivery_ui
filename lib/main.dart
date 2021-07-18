@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Food Delivery UI',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
         scaffoldBackgroundColor: Colors.grey[200],
-        primaryColor: Colors.deepOrangeAccent,
+        primaryColor: Colors.cyan,
       ),
       home: HomeScreen(),
     );

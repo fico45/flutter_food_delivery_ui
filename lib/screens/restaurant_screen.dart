@@ -24,6 +24,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
   _buildMenuItem(Food menuItem) {
     return Center(
       child: Stack(
+        alignment: Alignment.center,
         children: [
           Container(
             height: 175,
@@ -58,22 +59,48 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                   ]),
             ),
           ),
-          Column(
-            children: [
-              Text(
-                menuItem.name,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.2,
+          Positioned(
+            bottom: 65,
+            child: Column(
+              children: [
+                Text(
+                  menuItem.name,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+                Text(
+                  '\$${menuItem.price}',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: 10,
+            right: 10,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: IconButton(
+                onPressed: () {},
+                iconSize: 30,
+                icon: Icon(
+                  Icons.add,
                 ),
               ),
-              Text(
-                '\$${menuItem.price}',
-              ),
-            ],
-          )
+            ),
+          ),
         ],
       ),
     );
